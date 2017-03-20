@@ -133,49 +133,37 @@ I'm using this module with my Jarvis installation (see http://domotiquefacile.fr
 <br>When I speak to Jarvis, I say for example : "add FRUITS to the SHOPPING memo list", and Jarvis automatically sends a http get request (through curl) to the MMM-Memo module.
 <br><br>The available http get requests are the following at the moment:
 
-<br><br><b>To add `Fruits` to the `Shopping` memo list :</b>
+### To add `Fruits` to the `Shopping` memo list :
+<br><b>To add `Fruits` to the `Shopping` memo list :</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
 ````
 
-<br><br><b>Will add `Daddy: +33 68809xxxx` to the `Phone Numbers` memo list with a WARNING level :</b>
+<br><b>Will add `Daddy: +33 68809xxxx` to the `Phone Numbers` memo list with a WARNING level :</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33%2068809xxxx&level=WARNING
 ````
 
-<br><br><b>To remove the second displayed memo of the `Phone Numbers` memo list :</b>
+<br><b>To remove the second displayed memo of the `Phone Numbers` memo list :</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2
 ````
 
-<br><br><b>To remove ALL memos of the `Phone Numbers` memo list :</b>
+<br><b>To remove ALL memos of the `Phone Numbers` memo list :</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL
 ````
 
-<br><br><b>--- NOT YET IMPLEMENTED --- To temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos :</b>
+<br><b>--- NOT YET IMPLEMENTED --- To temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos :</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2
 ````
 
-<br><br><b>--- NOT YET IMPLEMENTED --- To temporary display ALL memos of the `Shopping` memo list. It will be useful when a note does not display all memos :</b>
+<br><b>--- NOT YET IMPLEMENTED --- To temporary display ALL memos of the `Shopping` memo list. It will be useful when a note does not display all memos :</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
 ````
 
-<table width="100%">
-	<thead>
-		<tr><th>HTTP GET REQUEST</th></tr>
-	<thead>
-	<tbody>
-        <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO<br><br><b>Will add `Fruits` to the `Shopping` memo list</b></td></tr>
-        <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33%2068809xxxx&level=WARNING<br><br><b>Will add `Daddy: +33 68809xxxx` to the `Phone Numbers` memo list with a WARNING level</b></td></tr>
-        <tr><td>http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2<br><br><b>Will remove the second displayed memo of the `Phone Numbers` memo list</b></td></tr>
-        <tr><td>http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL<br><br><b>Will remove ALL memos of the `Phone Numbers` memo list.</b></td></tr>
-        <tr><td>http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2<br><br><b>NOT YET IMPLEMENTED</b><br>Will temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos</b></td></tr>
-        <tr><td>http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL<br><br><b>NOT YET IMPLEMENTED</b><br>Will temporary display ALL memos of the `Shopping` memo list. It will be useful when a note does not display all memos</b></td></tr>
-	</tbody>
-</table>
 
 
 ## Special thanks
