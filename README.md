@@ -50,8 +50,9 @@ The following properties can be configured:
 | `memoMaxMsgSize`           | [OPTIONAL]<br>Integer used to define the maximum number of characters to be displayed per memo.<br><br> **Default value:** `false` (It will show all characters)
 | `memoDisplayDuration`      | [OPTIONAL]<br>Used to show since when memos have been created.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
 | `memoDisplayIfEmpty`       | [OPTIONAL]<br>Used to display (or not) an empty note if there is no memo inside.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
-| `memoDisplayId`            | [OPTIONAL]<br>Used to display (or not) a number before each memo. This number is necessary to remove a memo.<br><br>** Note that this unicode character is limited to 20 **<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
+| `memoDisplayId`            | [OPTIONAL]<br>Used to display (or not) a number before each memo. This number is necessary to remove a memo.<br><br>**Note that this unicode character is limited to 20**<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
 | `memoDisplayHeader`        | [OPTIONAL]<br>Used to display (or not) the memoTitle at the top of the note.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
+| `memoDisplayNotification`  | [OPTIONAL]<br>Used to display (or not) the notification using the default alert module.<br>See [How to use](##to-temporary-display-the-second-memo-of-the-shopping-memo-note-it-will-be-useful-for-cut-memos) section for more information on this property.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
 | `memoColorBackground`      | [OPTIONAL]<br>Used to define the color of the note.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Yellow`
 | `memoColorHeader`          | [OPTIONAL]<br>Used to define the color of the header (if displayed).<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
 | `memoColorFont`            | [OPTIONAL]<br>Used to define the color of the memo font.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
@@ -74,11 +75,13 @@ I'm using this module with my Jarvis installation from [DomotiqueFacile](http://
 ````
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
 ````
+**NOTE** : The level property is optional in the request. If not specified, the `INFO` level will be set.
 
 ### To add `Daddy: +33123456789` to the `Phone Numbers` memo note with a WARNING level:
 ````
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33123456789&level=WARNING
 ````
+**NOTE** : The level property is optional in the request. If not specified, the `INFO` level will be set.
 
 ### To remove the second displayed memo of the `Phone Numbers` memo note:
 ````
@@ -90,17 +93,29 @@ http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2
 http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL
 ````
 
-### To temporary display the second memo of the `Shopping` memo note. It will be useful for cut memos:
-This HTTP request is <b>NOT YET IMPLEMENTED</b>
+### To temporary display the second memo of the `Shopping` memo note. It is useful for cut memos:
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2
 ````
+Memo note is displayed using the [default alert module](https://github.com/MichMich/MagicMirror/tree/master/modules/default/alert),
+so it is necessary to configure this alert module in your `config/config.js` file if you want to see notifications.
+<br><br>**NOTE** : I saw a problem when more than one unique MMM-Memo module is defined in the `config/config.js` file.
+<br>Indeed, the same notification is displayed several times (e.g. 3 times if you defined 3 MMM-Memo modules). I did not
+deeply investigate to understand the root cause.
+<br><br><b>A workaround is to use the `memoDisplayNotification` property by setting it to `true` for ONLY ONE MMM-MEMO MODULE</b>
+<br>Do not forget to have ONE `memoDisplayNotification` set to `true` if you want to see notifications.
 
 ### To temporary display ALL memos of the `Shopping` memo note. It will be useful when a note does not display all memos:
-This HTTP request is <b>NOT YET IMPLEMENTED</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
 ````
+Memo note is displayed using the [default alert module](https://github.com/MichMich/MagicMirror/tree/master/modules/default/alert),
+so it is necessary to configure this alert module in your `config/config.js` file if you want to see notifications.
+<br><br>**NOTE** : I saw a problem when more than one unique MMM-Memo module is defined in the `config/config.js` file.
+<br>Indeed, the same notification is displayed several times (e.g. 3 times if you defined 3 MMM-Memo modules). I did not
+deeply investigate to understand the root cause.
+<br><br><b>A workaround is to use the `memoDisplayNotification` property by setting it to `true` for ONLY ONE MMM-MEMO MODULE</b>
+<br>Do not forget to have ONE `memoDisplayNotification` set to `true` if you want to see notifications.
 
 
 ## Colors
@@ -136,5 +151,6 @@ Here are the available colors.
 - [Michael Teeuw](https://github.com/MichMich) for creating the awesome [MagicMirror2](https://github.com/MichMich/MagicMirror/tree/develop) project that made this module possible.
 - [Paviro](https://github.com/paviro) for creating the [MMM-Syslog](https://github.com/paviro/MMM-syslog) module that I used as guidance in creating this module.
 - [Taylored Marketing](http://www.tayloredmktg.com/rgb/#PI) for colors definition.
-- [Creative Punch](http://creative-punch.net/2014/02/create-css3-post-it-note/), for the memo note CSS creation.
+- [Creative Punch](http://creative-punch.net/2014/02/create-css3-post-it-note/) for the memo note CSS creation.
+- [Slamet PS](https://github.com/slametps) for the Indonesian translation
 <br><br>Enjoy... and do not hesitate to make comments or propose new functionalities.
