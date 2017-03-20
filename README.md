@@ -3,7 +3,7 @@ Memo Module for MagicMirror<sup>2</sup>
 
 This an extension for the [MagicMirror²](https://magicmirror.builders/).
 This Module is used to add many memo notes on your Magic Mirror.
-<br>Content is manageable through http requests.
+<br>Content is manageable through HTTP get requests.
 
 ## Dependencies
   * An installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
@@ -60,6 +60,46 @@ The following properties can be configured:
 | `memoHeight`               | [OPTIONAL]<br>Value to specify the height of the note.<br><br> **Default value:** `100px`
 | `memoPadding`              | [OPTIONAL]<br>Value to specify the padding of the note.<br><br> **Default value:** `20px`
 | `format`                   | [OPTIONAL]<br>Displays relative date format, for absolute date format provide a string like `'DD:MM HH:mm'` [All Options](http://momentjs.com/docs/#/displaying/format/)
+
+
+
+## How to Use
+
+I'm using this module with my Jarvis installation from [DomotiqueFacile](http://domotiquefacile.fr/jarvis/).
+<br>When I speak to Jarvis, I say for example : "add FRUITS to the SHOPPING memo list", and Jarvis automatically sends a HTTP get request to the MMM-Memo module.
+<br><br>The available HTTP get requests are the following at the moment:
+
+### To add `Fruits` to the `Shopping` memo note:
+````
+http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
+````
+
+### To add `Daddy: +33123456789` to the `Phone Numbers` memo note with a WARNING level:
+````
+http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33123456789&level=WARNING
+````
+
+### To remove the second displayed memo of the `Phone Numbers` memo note:
+````
+http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2
+````
+
+### To remove ALL memos of the `Phone Numbers` memo note:
+````
+http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL
+````
+
+### To temporary display the second memo of the `Shopping` memo note. It will be useful for cut memos:
+This HTTP request is <b>NOT YET IMPLEMENTED</b>
+````
+http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2
+````
+
+### To temporary display ALL memos of the `Shopping` memo note. It will be useful when a note does not display all memos:
+This HTTP request is <b>NOT YET IMPLEMENTED</b>
+````
+http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
+````
 
 
 ## Colors
@@ -127,47 +167,7 @@ Here are the available colors.
 
 
 
-## How to Use
-
-I'm using this module with my Jarvis installation (see http://domotiquefacile.fr/jarvis/).
-<br>When I speak to Jarvis, I say for example : "add FRUITS to the SHOPPING memo list", and Jarvis automatically sends a http get request (through curl) to the MMM-Memo module.
-<br><br>The available http get requests are the following at the moment:
-
-### To add `Fruits` to the `Shopping` memo list :
-````
-http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
-````
-
-### To add `Daddy: +33123456789` to the `Phone Numbers` memo list with a WARNING level :
-````
-http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33123456789&level=WARNING
-````
-
-### To remove the second displayed memo of the `Phone Numbers` memo list :
-````
-http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2
-````
-
-### To remove ALL memos of the `Phone Numbers` memo list :
-````
-http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL
-````
-
-### To temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos :
-This HTTP request is <b>NOT YET IMPLEMENTED</b>
-````
-http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2
-````
-
-### To temporary display ALL memos of the `Shopping` memo list. It will be useful when a note does not display all memos :
-This HTTP request is <b>NOT YET IMPLEMENTED</b>
-````
-http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
-````
-
-
-
 ## Special thanks
-I implemented colors from http://www.tayloredmktg.com/rgb/#PI website for color definitions, so I thank the author of this web page.
-<br>I got the memo note CSS from http://creative-punch.net/2014/02/create-css3-post-it-note/, so I also wanted to thank Creative Punch.
-<br>Enjoy... and do not hesitate to make comments or propose new functionalities.
+I implemented colors from [Taylored Marketing](http://www.tayloredmktg.com/rgb/#PI) for color definitions, so I thank the author of this web page.
+<br>I got the memo note CSS from [Creative Punch](http://creative-punch.net/2014/02/create-css3-post-it-note/), so I also wanted to thank Creative Punch.
+<br><br>Enjoy... and do not hesitate to make comments or propose new functionalities.
