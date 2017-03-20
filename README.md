@@ -138,9 +138,9 @@ I'm using this module with my Jarvis installation (see http://domotiquefacile.fr
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
 ````
 
-### To add `Daddy: +33 68809xxxx` to the `Phone Numbers` memo list with a WARNING level :
+### To add `Daddy: +33123456789` to the `Phone Numbers` memo list with a WARNING level :
 ````
-http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33%2068809xxxx&level=WARNING
+http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33123456789&level=WARNING
 ````
 
 ### To remove the second displayed memo of the `Phone Numbers` memo list :
