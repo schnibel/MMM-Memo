@@ -129,16 +129,26 @@ Here are the available colors.
 
 ## How to Use
 
-I'm using this module with my Jarvis installation (see http://domotiquefacile.fr/jarvis/). When I speak to Jarvis, I say for example : "add FRUITS to the SHOPPING memo list", and Jarvis automatically sends a http get request (through curl) to the MMM-Memo module.
-<br>The available http get requests are the following at the moment:
-| HTTP GET REQUEST                     | Description
-| -------------------------- | -----------
-| http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO | Will add `Fruits` to the `Shopping` memo list
-| http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%20%3A%20%2B33%206%2088%2009%20xx%20xx&level=WARNING | Will add `Daddy : + 33 6 88 09 XX XX` to the `Phone Numbers` memo list with a WARNING level
-| http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2 | Will remove the second displayed memo of the `Phone Numbers` memo list
-| http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL | Will remove ALL memos of the `Phone Numbers` memo list.
-| http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2 | ** NOT YET IMPLEMENTED ** Will temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos
-| http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL | ** NOT YET IMPLEMENTED ** Will temporary display ALL memos of the `Shopping` memo list. It will be useful when a note does not display all memos
+I'm using this module with my Jarvis installation (see http://domotiquefacile.fr/jarvis/).
+<br>When I speak to Jarvis, I say for example : "add FRUITS to the SHOPPING memo list", and Jarvis automatically sends a http get request (through curl) to the MMM-Memo module.
+<br><br>The available http get requests are the following at the moment:
+<table width="100%">
+	<thead>
+		<tr>
+			<th>HTTP GET REQUEST</th>
+			<th width="100%">DESCRIPTION</th>
+		</tr>
+	<thead>
+	<tbody>
+        <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO</td><td>Will add `Fruits` to the `Shopping` memo list</td></tr>
+        <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%20%3A%20%2B33%206%2088%2009%20xx%20xx&level=WARNING</td><td>Will add `Daddy : + 33 6 88 09 XX XX` to the `Phone Numbers` memo list with a WARNING level</td></tr>
+        <tr><td>http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2</td><td>Will remove the second displayed memo of the `Phone Numbers` memo list</td></tr>
+        <tr><td>http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL</td><td>Will remove ALL memos of the `Phone Numbers` memo list.</td></tr>
+        <tr><td>http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2</td><td><b>NOT YET IMPLEMENTED</b><br>Will temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos</td></tr>
+        <tr><td>http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL</td><td><b>NOT YET IMPLEMENTED</b><br>Will temporary display ALL memos of the `Shopping` memo list. It will be useful when a note does not display all memos</td></tr>
+	</tbody>
+</table>
+
 
 ## Special thanks
 I implemented colors from http://www.tayloredmktg.com/rgb/#PI website for color definitions, so I thank the author of this web page.
