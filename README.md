@@ -2,7 +2,8 @@
 Memo Module for MagicMirror<sup>2</sup>
 
 This an extension for the [MagicMirror²](https://magicmirror.builders/).
-This Module is used to add many memo notes on your Magic Mirror. Content is manageable through http requests.
+This Module is used to add many memo notes on your Magic Mirror. 
+<br>Content is manageable through http requests.
 
 ## Dependencies
   * An installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
