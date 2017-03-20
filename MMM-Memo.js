@@ -63,7 +63,8 @@
 	getTranslations: function() {
 		return {
 			en: "translations/en.json",
-			fr: "translations/fr.json"
+			fr: "translations/fr.json",
+			id: "translations/id.json"
 		};
 	},
 
@@ -78,13 +79,13 @@
 		Log.info("Starting module: " + this.name);
 
 		moment.locale(config.language);
-		
+
 		//Update DOM every minute so that the time of the call updates and calls get removed after a certain time
 		setInterval(() => {
 			this.updateDom();
 		}, 60000);
 	 },
-	
+
 	socketNotificationReceived: function(notification, payload) {
 
 		if(notification === "INIT") {
