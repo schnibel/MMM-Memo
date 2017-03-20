@@ -45,21 +45,21 @@ The following properties can be configured:
 | Option                     | Description
 | -------------------------- | -----------
 | `memoTitle`                | [MANDATORY]<br>Title of the memo note.<br>This title is also used to retreive memos from the persistence file.<br><br> **This is NOT case sensitive**
-| `memoMaxItems`             | [OPTIONAL] Integer used to define the maximum number of memo to display per note. If the number of memos is greater than the one specified here, a message (e.g. `+ 2 more memos`) will be displayed at the bottom of the note.<br><br> **Default value:** `5`
-| `memoMaxMsgSize`           | [OPTIONAL] Integer used to define the maximum number of characters to be displayed per memo.<br><br> **Default value:** `false` -> It will show all characters
-| `memoDisplayDuration`      | [OPTIONAL] Used to show since when memos have been created.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
-| `memoDisplayIfEmpty`       | [OPTIONAL] Used to display (or not) an empty note if there is no memo inside.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
-| `memoDisplayId`            | [OPTIONAL] Used to display (or not) a number before each memo. This number is necessary to remove a memo.<br><br>** Note that this unicode character is limited to 20 **<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
-| `memoDisplayHeader`        | [OPTIONAL] Used to display (or not) the memoTitle at the top of the note.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
-| `memoColorBackground`      | [OPTIONAL] Used to define the color of the note.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Yellow`
-| `memoColorHeader`          | [OPTIONAL] Used to define the color of the header (if displayed).<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
-| `memoColorFont`            | [OPTIONAL] Used to define the color of the memo font.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
-| `memoColorWarning`         | [OPTIONAL] Used to define the color of a WARNING note.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Red`
-| `memoRotation`             | [OPTIONAL] Used to rotate the note.<br><br> **Possible values:** `-10` or `-8` or `-6` or `-4` or `-2` or `0` or `2` or `4` or `6` or `8` or `10`<br> **Default value:** `0`
-| `memoWidth`                | [OPTIONAL] Value to specify the width of the note.<br><br> **Default value:** `100px`
-| `memoHeight`               | [OPTIONAL] Value to specify the height of the note.<br><br> **Default value:** `100px`
-| `memoPadding`              | [OPTIONAL] Value to specify the padding of the note.<br><br> **Default value:** `20px`
-| `format`                   | [OPTIONAL] Displays relative date format, for absolute date format provide a string like `'DD:MM HH:mm'` [All Options](http://momentjs.com/docs/#/displaying/format/)
+| `memoMaxItems`             | [OPTIONAL]<br>Integer used to define the maximum number of memo to display per note.<br>If the number of memos is greater than the one specified here, a message (e.g. `+ 2 more memos`) will be displayed at the bottom of the note.<br><br> **Default value:** `5`
+| `memoMaxMsgSize`           | [OPTIONAL]<br>Integer used to define the maximum number of characters to be displayed per memo.<br><br> **Default value:** `false` (It will show all characters)
+| `memoDisplayDuration`      | [OPTIONAL]<br>Used to show since when memos have been created.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
+| `memoDisplayIfEmpty`       | [OPTIONAL]<br>Used to display (or not) an empty note if there is no memo inside.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
+| `memoDisplayId`            | [OPTIONAL]<br>Used to display (or not) a number before each memo. This number is necessary to remove a memo.<br><br>** Note that this unicode character is limited to 20 **<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
+| `memoDisplayHeader`        | [OPTIONAL]<br>Used to display (or not) the memoTitle at the top of the note.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
+| `memoColorBackground`      | [OPTIONAL]<br>Used to define the color of the note.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Yellow`
+| `memoColorHeader`          | [OPTIONAL]<br>Used to define the color of the header (if displayed).<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
+| `memoColorFont`            | [OPTIONAL]<br>Used to define the color of the memo font.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
+| `memoColorWarning`         | [OPTIONAL]<br>Used to define the color of a WARNING note.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Red`
+| `memoRotation`             | [OPTIONAL]<br>Used to rotate the note.<br><br> **Possible values:** `-10` or `-8` or `-6` or `-4` or `-2` or `0` or `2` or `4` or `6` or `8` or `10`<br> **Default value:** `0`
+| `memoWidth`                | [OPTIONAL]<br>Value to specify the width of the note.<br><br> **Default value:** `100px`
+| `memoHeight`               | [OPTIONAL]<br>Value to specify the height of the note.<br><br> **Default value:** `100px`
+| `memoPadding`              | [OPTIONAL]<br>Value to specify the padding of the note.<br><br> **Default value:** `20px`
+| `format`                   | [OPTIONAL]<br>Displays relative date format, for absolute date format provide a string like `'DD:MM HH:mm'` [All Options](http://momentjs.com/docs/#/displaying/format/)
 
 
 ## Colors
