@@ -52,7 +52,7 @@ The following properties can be configured:
 | `memoDisplayIfEmpty`       | [OPTIONAL]<br>Used to display (or not) an empty note if there is no memo inside.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
 | `memoDisplayId`            | [OPTIONAL]<br>Used to display (or not) a number before each memo. This number is necessary to remove a memo.<br><br>**Note that this unicode character is limited to 20**<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
 | `memoDisplayHeader`        | [OPTIONAL]<br>Used to display (or not) the memoTitle at the top of the note.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
-| `memoDisplayNotification`  | [OPTIONAL]<br>Used to display (or not) the notification using the default alert module.<br>See [How to use](#to-temporary-display-the-second-memo-of-the-shopping-memo-note-it-will-be-useful-for-cut-memos) section for more information on this property.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
+| `memoDisplayNotification`  | [OPTIONAL]<br>Used to display (or not) the notification using the default alert module.<br>See [How to use](#to-temporary-display-the-second-memo-of-the-shopping-memo-note) section for more information on this property.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
 | `memoColorBackground`      | [OPTIONAL]<br>Used to define the color of the note.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Yellow`
 | `memoColorHeader`          | [OPTIONAL]<br>Used to define the color of the header (if displayed).<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
 | `memoColorFont`            | [OPTIONAL]<br>Used to define the color of the memo font.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
@@ -93,7 +93,7 @@ http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2
 http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL
 ````
 
-### To temporary display the second memo of the `Shopping` memo note. It is useful for cut memos:
+### To temporary display the second memo of the `Shopping` memo note:
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2
 ````
@@ -105,7 +105,7 @@ deeply investigate to understand the root cause.
 <br>A workaround is to use the `memoDisplayNotification` property by setting it to `true` for ONLY ONE MMM-MEMO MODULE
 <br>Do not forget to have ONE `memoDisplayNotification` set to `true` if you want to see notifications.
 
-### To temporary display ALL memos of the `Shopping` memo note. It will be useful when a note does not display all memos:
+### To temporary display ALL memos of the `Shopping` memo note:
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
 ````
