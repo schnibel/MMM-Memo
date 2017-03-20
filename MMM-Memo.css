@@ -1,0 +1,353 @@
+/* Magic Mirror
+ * Module: MMM-Memo
+ *
+ * By Christophe Michel @schnibel
+ * March 2017
+ * MIT Licensed.
+ *
+ * Source of memo note : http://creative-punch.net/2014/02/create-css3-post-it-note/
+ * Source of colors    : http://www.tayloredmktg.com/rgb/#PI
+ */
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+
+.small-info {
+  font-size: 0.7rem;
+  align: left;
+}
+
+.xxsmall {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+
+.symbol span {
+  display: inline-block;
+  -ms-transform: translate(0, 2px); /* IE 9 */
+  -webkit-transform: translate(0, 2px); /* Safari */
+  transform: translate(0, 2px);
+}
+
+.quote-container {
+  margin-top: 50px;
+  position: relative;
+}
+
+.note {
+  position: relative;
+  margin: 0 auto;
+  font-family: Satisfy;
+  font-size: 30px;
+  box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+}
+
+.note .author {
+  display: block;
+  margin: 40px 0 0 0;
+  text-align: right;
+}
+
+.rotate2deg {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.rotate4deg {
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+
+.rotate6deg {
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+  -o-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
+}
+
+.rotate8deg {
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+
+.rotate10deg {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+.rotate-2deg {
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.rotate-4deg {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+
+.rotate-6deg {
+  -webkit-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+
+.rotate-8deg {
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+
+.rotate-10deg {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+.pin {
+  background-color: #aaa;
+  display: block;
+  height: 32px;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  top: -16px;
+  z-index: 1;
+}
+
+.pin:after {
+  background-color: #A31;
+  background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+              inset 3px 3px 3px hsla(0,0%,100%,.2),
+              inset -3px -3px 3px hsla(0,0%,0%,.2),
+              23px 20px 3px hsla(0,0%,0%,.15);
+  content: '';
+  height: 12px;
+  left: -5px;
+  position: absolute;
+  top: -10px;
+  width: 12px;
+}
+
+.pin:before {
+  background-color: hsla(0,0%,0%,0.1);
+  box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+  content: '';
+
+  height: 24px;
+  width: 2px;
+  left: 0;
+  position: absolute;
+  top: 8px;
+
+  transform: rotate(57.5deg);
+  -moz-transform: rotate(57.5deg);
+  -webkit-transform: rotate(57.5deg);
+  -o-transform: rotate(57.5deg);
+  -ms-transform: rotate(57.5deg);
+
+  transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+}
+
+
+
+
+/* Whites / Pastels */
+.Snow {background: #fffafa;}
+.Snow2 {background: #eee9e9;}
+.Snow3 {background: #cdc9c9;}
+.Snow4 {background: #8b8989;}
+.GhostWhite {background: #f8f8ff;}
+.WhiteSmoke {background: #f5f5f5;}
+.Gainsboro {background: #dccdc;}
+.FloralWhite {background: #fffaf0;}
+.OldLace {background: #fdf5e6;}
+.Linen {background: #faf0e6;}
+.AntiqueWhite {background: #faebd7;}
+.AntiqueWhite2 {background: #eedfcc;}
+.AntiqueWhite3 {background: #cdc0b0;}
+.AntiqueWhite4 {background: #8b8378;}
+.PapayaWhip {background: #ffefd5;}
+.BlanchedAlmond {background: #ffebcd;}
+.Bisque {background: #ffe4c4;}
+.Bisque2 {background: #eed5b7;}
+.Bisque3 {background: #cdb79e;}
+.Bisque4 {background: #8b7d6b;}
+.PeachPuff {background: #ffdab9;}
+.PeachPuff2 {background: #eecbad;}
+.PeachPuff3 {background: #cdaf95;}
+.PeachPuff4 {background: #8b7765;}
+.NavajoWhite {background: #ffdead;}
+.Moccasin {background: #ffe4b5;}
+.Cornsilk {background: #fff8dc;}
+.Cornsilk2 {background: #eee8dc;}
+.Cornsilk3 {background: #cdc8b1;}
+.Cornsilk4 {background: #8b8878;}
+.Ivory {background: #fffff0;}
+.Ivory2 {background: #eeeee0;}
+.Ivory3 {background: #cdcdc1;}
+.Ivory4 {background: #8b8b83;}
+.LemonChiffon {background: #fffacd;}
+.Seashell {background: #fff5ee;}
+.Seashell2 {background: #eee5de;}
+.Seashell3 {background: #cdc5bf;}
+.Seashell4 {background: #8b8682;}
+.Honeydew {background: #f0fff0;}
+.Honeydew2 {background: #e0eee0;}
+.Honeydew3 {background: #c1cdc1;}
+.Honeydew4 {background: #838b83;}
+.MintCream {background: #f5fffa;}
+.Azure {background: #f0ffff;}
+.AliceBlue {background: #f0f8ff;}
+.Lavender {background: #e6e6fa;}
+.LavenderBlush {background: #fff0f5;}
+.MistyRose {background: #ffe4e1;}
+.White {background: #ffffff;}
+
+/* Grays */
+.Black {background: #000000;}
+.DarkSlateGray {background: #2f4f4f;}
+.DimGray {background: #696969;}
+.SlateGray {background: #708090;}
+.LightSlateGray {background: #778899;}
+.Gray {background: #bebebe;}
+.LightGray {background: #d3d3d3;}
+
+/* Blues */
+.MidnightBlue {background: #191970;}
+.Navy {background: #000080;}
+.CornflowerBlue {background: #6495ed;}
+.DarkSlateBlue {background: #483d8b;}
+.SlateBlue {background: #6a5acd;}
+.MediumSlateBlue {background: #7b68ee;}
+.LightSlateBlue {background: #8470ff;}
+.MediumBlue {background: #0000cd;}
+.RoyalBlue {background: #4169e1;}
+.Blue {background: #0000ff;}
+.DodgerBlue {background: #1e90ff;}
+.DeepSkyBlue {background: #00bfff;}
+.SkyBlue {background: #87ceeb;}
+.LightSkyBlue {background: #87cefa;}
+.SteelBlue {background: #4682b4;}
+.LightSteelBlue {background: #b0c4de;}
+.LightBlue {background: #add8e6;}
+.PowderBlue {background: #b0e0e6;}
+.PaleTurquoise {background: #afeeee;}
+.DarkTurquoise {background: #00ced1;}
+.MediumTurquoise {background: #48d1cc;}
+.Turquoise {background: #40e0d0;}
+.Cyan {background: #00ffff;}
+.LightCyan {background: #e0ffff;}
+.CadetBlue {background: #5f9ea0;}
+
+/* Greens */
+.MediumAquamarine {background: #66cdaa;}
+.Aquamarine {background: #7fffd4;}
+.DarkGreen {background: #006400;}
+.DarkOliveGreen {background: #556b2f;}
+.DarkSeaGreen {background: #8fbc8f;}
+.SeaGreen {background: #2e8b57;}
+.MediumSeaGreen {background: #3cb371;}
+.LightSeaGreen {background: #20b2aa;}
+.PaleGreen {background: #98fb98;}
+.SpringGreen {background: #00ff7f;}
+.LawnGreen {background: #7cfc00;}
+.Chartreuse {background: #7fff00;}
+.MediumSpringGreen {background: #00fa9a;}
+.GreenYellow {background: #adff2f;}
+.LimeGreen {background: #32cd32;}
+.YellowGreen {background: #9acd32;}
+.ForestGreen {background: #228b22;}
+.OliveDrab {background: #6b8e23;}
+.DarkKhaki {background: #bdb76b;}
+.Khaki {background: #f0e68c;}
+
+/* Yellows */
+.PaleGoldenrod {background: #eee8aa;}
+.LightGoldenrodYellow {background: #fafad2;}
+.LightYellow {background: #ffffe0;}
+.Yellow {background: #ffff00;}
+.Gold {background: #ffd700;}
+.LightGoldenrod {background: #eedd82;}
+.Goldenrod {background: #daa520;}
+.DarkGoldenrod {background: #b8860b;}
+
+/* Browns */
+.RosyBrown {background: #bc8f8f;}
+.IndianRed {background: #cd5c5c;}
+.SaddleBrown {background: #8b4513;}
+.Sienna {background: #a0522d;}
+.Peru {background: #cd853f;}
+.Burlywood {background: #deb887;}
+.Beige {background: #f5f5dc;}
+.Wheat {background: #f5deb3;}
+.SandyBrown {background: #f4a460;}
+.Tan {background: #d2b48c;}
+.Chocolate {background: #d2691e;}
+.Firebrick {background: #b22222;}
+.Brown {background: #a52a2a;}
+
+/* Oranges */
+.DarkSalmon {background: #e9967a;}
+.Salmon {background: #fa8072;}
+.LightSalmon {background: #ffa07a;}
+.Orange {background: #ffa500;}
+.DarkOrange {background: #ff8c00;}
+.Coral {background: #ff7f50;}
+.LightCoral {background: #f08080;}
+.Tomato {background: #ff6347;}
+.OrangeRed {background: #ff4500;}
+.Red {background: #ff0000;}
+
+/* Pinks/Violets */
+.HotPink {background: #ff69b4;}
+.DeepPink {background: #ff1493;}
+.Pink {background: #ffc0cb;}
+.LightPink {background: #ffb6c1;}
+.PaleVioletRed {background: #db7093;}
+.Maroon {background: #b03060;}
+.MediumVioletRed {background: #c71585;}
+.VioletRed {background: #d02090;}
+.Violet {background: #ee82ee;}
+.Plum {background: #dda0dd;}
+.Orchid {background: #da70d6;}
+.MediumOrchid {background: #ba55d3;}
+.DarkOrchid {background: #9932cc;}
+.DarkViolet {background: #9400d3;}
+.BlueViolet {background: #8a2be2;}
+.Purple {background: #a020f0;}
+.MediumPurple {background: #9370db;}
+.Thistle {background: #d8bfd8;}
