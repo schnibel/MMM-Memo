@@ -52,7 +52,7 @@ The following properties can be configured:
 | `memoDisplayIfEmpty`       | [OPTIONAL]<br>Used to display (or not) an empty note if there is no memo inside.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
 | `memoDisplayId`            | [OPTIONAL]<br>Used to display (or not) a number before each memo. This number is necessary to remove a memo.<br><br>**Note that this unicode character is limited to 20**<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
 | `memoDisplayHeader`        | [OPTIONAL]<br>Used to display (or not) the memoTitle at the top of the note.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `true`
-| `memoDisplayNotification`  | [OPTIONAL]<br>Used to display (or not) the notification using the default alert module.<br>See [How to use](##to-temporary-display-the-second-memo-of-the-shopping-memo-note-it-will-be-useful-for-cut-memos) section for more information on this property.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
+| `memoDisplayNotification`  | [OPTIONAL]<br>Used to display (or not) the notification using the default alert module.<br>See [How to use](#to-temporary-display-the-second-memo-of-the-shopping-memo-note-it-will-be-useful-for-cut-memos) section for more information on this property.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
 | `memoColorBackground`      | [OPTIONAL]<br>Used to define the color of the note.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Yellow`
 | `memoColorHeader`          | [OPTIONAL]<br>Used to define the color of the header (if displayed).<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
 | `memoColorFont`            | [OPTIONAL]<br>Used to define the color of the memo font.<br><br> **Possible values:** See [Colors](#colors) for more information.<br> **Default value:** `Black`
@@ -102,7 +102,7 @@ so it is necessary to configure this alert module in your `config/config.js` fil
 <br><br>**NOTE** : I saw a problem when more than one unique MMM-Memo module is defined in the `config/config.js` file.
 <br>Indeed, the same notification is displayed several times (e.g. 3 times if you defined 3 MMM-Memo modules). I did not
 deeply investigate to understand the root cause.
-<br><br><b>A workaround is to use the `memoDisplayNotification` property by setting it to `true` for ONLY ONE MMM-MEMO MODULE</b>
+<br>A workaround is to use the `memoDisplayNotification` property by setting it to `true` for ONLY ONE MMM-MEMO MODULE
 <br>Do not forget to have ONE `memoDisplayNotification` set to `true` if you want to see notifications.
 
 ### To temporary display ALL memos of the `Shopping` memo note. It will be useful when a note does not display all memos:
@@ -114,7 +114,7 @@ so it is necessary to configure this alert module in your `config/config.js` fil
 <br><br>**NOTE** : I saw a problem when more than one unique MMM-Memo module is defined in the `config/config.js` file.
 <br>Indeed, the same notification is displayed several times (e.g. 3 times if you defined 3 MMM-Memo modules). I did not
 deeply investigate to understand the root cause.
-<br><br><b>A workaround is to use the `memoDisplayNotification` property by setting it to `true` for ONLY ONE MMM-MEMO MODULE</b>
+<br>A workaround is to use the `memoDisplayNotification` property by setting it to `true` for ONLY ONE MMM-MEMO MODULE
 <br>Do not forget to have ONE `memoDisplayNotification` set to `true` if you want to see notifications.
 
 
