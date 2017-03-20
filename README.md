@@ -44,7 +44,7 @@ The following properties can be configured:
 
 | Option                     | Description
 | -------------------------- | -----------
-| `memoTitle`                | [MANDATORY] Title of the memo note.<br><br> **This is NOT case sensitive**
+| `memoTitle`                | [MANDATORY]<br>Title of the memo note.<br>This title is also used to retreive memos from the persistence file.<br><br> **This is NOT case sensitive**
 | `memoMaxItems`             | [OPTIONAL] Integer used to define the maximum number of memo to display per note. If the number of memos is greater than the one specified here, a message (e.g. `+ 2 more memos`) will be displayed at the bottom of the note.<br><br> **Default value:** `5`
 | `memoMaxMsgSize`           | [OPTIONAL] Integer used to define the maximum number of characters to be displayed per memo.<br><br> **Default value:** `false` -> It will show all characters
 | `memoDisplayDuration`      | [OPTIONAL] Used to show since when memos have been created.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
