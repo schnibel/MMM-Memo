@@ -71,29 +71,29 @@ I'm using this module with my Jarvis installation from [DomotiqueFacile](http://
 <br>When I speak to Jarvis, I say for example : "add FRUITS to the SHOPPING memo list", and Jarvis automatically sends a HTTP get request to the MMM-Memo module.
 <br><br>The available HTTP get requests are the following at the moment:
 
-### To add `Fruits` to the `Shopping` memo note:
+### To add 'Fruits' to the 'Shopping' memo note:
 ````
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
 ````
 **NOTE** : The level property is optional in the request. If not specified, the `INFO` level will be set.
 
-### To add `Daddy: +33123456789` to the `Phone Numbers` memo note with a WARNING level:
+### To add 'Daddy: +33123456789' to the 'Phone Numbers' memo note with a WARNING level:
 ````
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33123456789&level=WARNING
 ````
 **NOTE** : The level property is optional in the request. If not specified, the `INFO` level will be set.
 
-### To remove the second displayed memo of the `Phone Numbers` memo note:
+### To remove the second displayed memo of the 'Phone Numbers' memo note:
 ````
 http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2
 ````
 
-### To remove ALL memos of the `Phone Numbers` memo note:
+### To remove ALL memos of the 'Phone Numbers' memo note:
 ````
 http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL
 ````
 
-### To temporary display the second memo of the `Shopping` memo note:
+### To temporary display the second memo of the 'Shopping' memo note:
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2
 ````
@@ -105,7 +105,7 @@ deeply investigate to understand the root cause.
 <br>A workaround is to use the `memoDisplayNotification` property by setting it to `true` for ONLY ONE MMM-MEMO MODULE
 <br>Do not forget to have ONE `memoDisplayNotification` set to `true` if you want to see notifications.
 
-### To temporary display ALL memos of the `Shopping` memo note:
+### To temporary display ALL memos of the 'Shopping' memo note:
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
 ````
