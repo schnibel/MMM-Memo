@@ -6,7 +6,7 @@ This Module is used to add many memo notes on your Magic Mirror.
 <br>Content is manageable through HTTP get requests.
 
 ## What does it look like
-![alt tag](https://raw.githubusercontent.com/schnibel/MMM-Memo/MMM-Memo.png)
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/MMM-Memo.png)
 
 ## Dependencies
   * An installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
