@@ -1,8 +1,6 @@
 # MMM-Memo
-Memo Module for MagicMirror<sup>2</sup>
-
 This an extension for the [MagicMirror²](https://magicmirror.builders/).
-This Module is used to add many memo notes on your Magic Mirror.
+<br>This Module is used to add many memo notes on your Magic Mirror.
 <br>Content is manageable through HTTP get requests.
 
 ## What does it look like
@@ -134,7 +132,9 @@ Here are the available colors.
 
 
 
-## Special thanks
-I implemented colors from [Taylored Marketing](http://www.tayloredmktg.com/rgb/#PI) for color definitions, so I thank the author of this web page.
-<br>I got the memo note CSS from [Creative Punch](http://creative-punch.net/2014/02/create-css3-post-it-note/), so I also wanted to thank Creative Punch.
+## Special Thanks
+- [Michael Teeuw](https://github.com/MichMich) for creating the awesome [MagicMirror2](https://github.com/MichMich/MagicMirror/tree/develop) project that made this module possible.
+- [Paviro](https://github.com/paviro) for creating the [MMM-Syslog](https://github.com/paviro/MMM-syslog) module that I used as guidance in creating this module.
+- [Taylored Marketing](http://www.tayloredmktg.com/rgb/#PI) for colors definition.
+- [Creative Punch](http://creative-punch.net/2014/02/create-css3-post-it-note/), for the memo note CSS creation.
 <br><br>Enjoy... and do not hesitate to make comments or propose new functionalities.
