@@ -134,32 +134,33 @@ I'm using this module with my Jarvis installation (see http://domotiquefacile.fr
 <br><br>The available http get requests are the following at the moment:
 
 ### To add `Fruits` to the `Shopping` memo list :
-<br><b>To add `Fruits` to the `Shopping` memo list :</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
 ````
 
-<br><b>Will add `Daddy: +33 68809xxxx` to the `Phone Numbers` memo list with a WARNING level :</b>
+### To add `Daddy: +33 68809xxxx` to the `Phone Numbers` memo list with a WARNING level :
 ````
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33%2068809xxxx&level=WARNING
 ````
 
-<br><b>To remove the second displayed memo of the `Phone Numbers` memo list :</b>
+### To remove the second displayed memo of the `Phone Numbers` memo list :
 ````
 http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2
 ````
 
-<br><b>To remove ALL memos of the `Phone Numbers` memo list :</b>
+### To remove ALL memos of the `Phone Numbers` memo list :
 ````
 http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL
 ````
 
-<br><b>--- NOT YET IMPLEMENTED --- To temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos :</b>
+### To temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos :
+This HTTP request is <b>NOT YET IMPLEMENTED</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2
 ````
 
-<br><b>--- NOT YET IMPLEMENTED --- To temporary display ALL memos of the `Shopping` memo list. It will be useful when a note does not display all memos :</b>
+### To temporary display ALL memos of the `Shopping` memo list. It will be useful when a note does not display all memos :
+This HTTP request is <b>NOT YET IMPLEMENTED</b>
 ````
 http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
 ````
