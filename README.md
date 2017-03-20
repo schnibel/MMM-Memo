@@ -6,7 +6,7 @@ This Module is used to add many memo notes on your Magic Mirror.
 <br>Content is manageable through HTTP get requests.
 
 ## What does it look like
-![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/MMM-Memo.png)
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo.png)
 
 ## Dependencies
   * An installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
@@ -107,125 +107,30 @@ http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
 
 ## Colors
 Here are the available colors.
-<table width="100%">
-	<thead>
-		<tr>
-			<th>Color Name</th>
-			<th width="100%">Color</th>
-		</tr>
-	<thead>
-	<tbody>
-        <tr><td>Snow</td><td style="background: #fffafa;"></td></tr>
-        <tr><td>Snow2</td><td style="background: #eee9e9;"></td></tr>
-        <tr><td>Snow3</td><td style="background: #cdc9c9;"></td></tr>
-        <tr><td>Snow4</td><td style="background: #8b8989;"></td></tr>
-        <tr><td>GhostWhite</td><td style="background: #f8f8ff;"></td></tr>
-        <tr><td>WhiteSmoke</td><td style="background: #f5f5f5;"></td></tr>
-        <tr><td>Gainsboro</td><td style="background: #dccdc;"></td></tr>
-        <tr><td>FloralWhite</td><td style="background: #fffaf0;"></td></tr>
-        <tr><td>OldLace</td><td style="background: #fdf5e6;"></td></tr>
-        <tr><td>Linen</td><td style="background: #faf0e6;"></td></tr>
-        <tr><td>AntiqueWhite</td><td style="background: #faebd7;"></td></tr>
-        <tr><td>AntiqueWhite2</td><td style="background: #eedfcc;"></td></tr>
-        <tr><td>AntiqueWhite3</td><td style="background: #cdc0b0;"></td></tr>
-        <tr><td>AntiqueWhite4</td><td style="background: #8b8378;"></td></tr>
-        <tr><td>PapayaWhip</td><td style="background: #ffefd5;"></td></tr>
-        <tr><td>BlanchedAlmond</td><td style="background: #ffebcd;"></td></tr>
-        <tr><td>Bisque</td><td style="background: #ffe4c4;"></td></tr>
-        <tr><td>Bisque2</td><td style="background: #eed5b7;"></td></tr>
-        <tr><td>Bisque3</td><td style="background: #cdb79e;"></td></tr>
-        <tr><td>Bisque4</td><td style="background: #8b7d6b;"></td></tr>
-        <tr><td>PeachPuff</td><td style="background: #ffdab9;"></td></tr>
-        <tr><td>PeachPuff2</td><td style="background: #eecbad;"></td></tr>
-        <tr><td>PeachPuff3</td><td style="background: #cdaf95;"></td></tr>
-        <tr><td>PeachPuff4</td><td style="background: #8b7765;"></td></tr>
-        <tr><td>NavajoWhite</td><td style="background: #ffdead;"></td></tr>
-        <tr><td>Moccasin</td><td style="background: #ffe4b5;"></td></tr>
-        <tr><td>Cornsilk</td><td style="background: #fff8dc;"></td></tr>
-        <tr><td>Cornsilk2</td><td style="background: #eee8dc;"></td></tr>
-        <tr><td>Cornsilk3</td><td style="background: #cdc8b1;"></td></tr>
-        <tr><td>Cornsilk4</td><td style="background: #8b8878;"></td></tr>
-        <tr><td>Ivory</td><td style="background: #fffff0;"></td></tr>
-        <tr><td>Ivory2</td><td style="background: #eeeee0;"></td></tr>
-        <tr><td>Ivory3</td><td style="background: #cdcdc1;"></td></tr>
-        <tr><td>Ivory4</td><td style="background: #8b8b83;"></td></tr>
-        <tr><td>LemonChiffon</td><td style="background: #fffacd;"></td></tr>
-        <tr><td>Seashell</td><td style="background: #fff5ee;"></td></tr>
-        <tr><td>Seashell2</td><td style="background: #eee5de;"></td></tr>
-        <tr><td>Seashell3</td><td style="background: #cdc5bf;"></td></tr>
-        <tr><td>Seashell4</td><td style="background: #8b8682;"></td></tr>
-        <tr><td>Honeydew</td><td style="background: #f0fff0;"></td></tr>
-        <tr><td>Honeydew2</td><td style="background: #e0eee0;"></td></tr>
-        <tr><td>Honeydew3</td><td style="background: #c1cdc1;"></td></tr>
-        <tr><td>Honeydew4</td><td style="background: #838b83;"></td></tr>
-        <tr><td>MintCream</td><td style="background: #f5fffa;"></td></tr>
-        <tr><td>Azure</td><td style="background: #f0ffff;"></td></tr>
-        <tr><td>AliceBlue</td><td style="background: #f0f8ff;"></td></tr>
-        <tr><td>Lavender</td><td style="background: #e6e6fa;"></td></tr>
-        <tr><td>LavenderBlush</td><td style="background: #fff0f5;"></td></tr>
-        <tr><td>MistyRose</td><td style="background: #ffe4e1;"></td></tr>
-        <tr><td>White</td><td style="background: #ffffff;"></td></tr>
+### Whites / Pastels
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo-Whites.png)
 
+### Grays
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo-Grays.png)
 
-        <tr><td>Snow</td><td style="background: #fffafa;"></td><td></td>
-<td>Snow2</td><td style="background: #eee9e9;"></td><td></td>
-<td>Snow3</td><td style="background: #cdc9c9;"></td><td></td>
-<td>Snow4</td><td style="background: #8b8989;"></td><td></td></tr>
-        <tr><td>GhostWhite</td><td style="background: #f8f8ff;"></td><td></td>
-<td>WhiteSmoke</td><td style="background: #f5f5f5;"></td><td></td>
-<td>Gainsboro</td><td style="background: #dccdc;"></td><td></td>
-<td>FloralWhite</td><td style="background: #fffaf0;"></td><td></td></tr>
-        <tr><td>OldLace</td><td style="background: #fdf5e6;"></td><td></td>
-<td>Linen</td><td style="background: #faf0e6;"></td><td></td>
-<td>AntiqueWhite</td><td style="background: #faebd7;"></td><td></td>
-<td>AntiqueWhite2</td><td style="background: #eedfcc;"></td><td></td></tr>
-        <tr><td>AntiqueWhite3</td><td style="background: #cdc0b0;"></td><td></td>
-<td>AntiqueWhite4</td><td style="background: #8b8378;"></td><td></td>
-<td>PapayaWhip</td><td style="background: #ffefd5;"></td><td></td>
-<td>BlanchedAlmond</td><td style="background: #ffebcd;"></td><td></td></tr>
-        <tr><td>Bisque</td><td style="background: #ffe4c4;"></td><td></td>
-<td>Bisque2</td><td style="background: #eed5b7;"></td><td></td>
-<td>Bisque3</td><td style="background: #cdb79e;"></td><td></td>
-<td>Bisque4</td><td style="background: #8b7d6b;"></td><td></td></tr>
-        <tr><td>PeachPuff</td><td style="background: #ffdab9;"></td><td></td>
-<td>PeachPuff2</td><td style="background: #eecbad;"></td><td></td>
-<td>PeachPuff3</td><td style="background: #cdaf95;"></td><td></td>
-<td>PeachPuff4</td><td style="background: #8b7765;"></td><td></td></tr>
-        <tr><td>NavajoWhite</td><td style="background: #ffdead;"></td><td></td>
-<td>Moccasin</td><td style="background: #ffe4b5;"></td><td></td>
-<td>Cornsilk</td><td style="background: #fff8dc;"></td><td></td>
-<td>Cornsilk2</td><td style="background: #eee8dc;"></td><td></td></tr>
-        <tr><td>Cornsilk3</td><td style="background: #cdc8b1;"></td><td></td>
-<td>Cornsilk4</td><td style="background: #8b8878;"></td><td></td>
-<td>Ivory</td><td style="background: #fffff0;"></td><td></td>
-<td>Ivory2</td><td style="background: #eeeee0;"></td><td></td></tr>
-        <tr><td>Ivory3</td><td style="background: #cdcdc1;"></td><td></td>
-<td>Ivory4</td><td style="background: #8b8b83;"></td><td></td>
-<td>LemonChiffon</td><td style="background: #fffacd;"></td><td></td>
-<td>Seashell</td><td style="background: #fff5ee;"></td><td></td></tr>
-        <tr><td>Seashell2</td><td style="background: #eee5de;"></td><td></td>
-<td>Seashell3</td><td style="background: #cdc5bf;"></td><td></td>
-<td>Seashell4</td><td style="background: #8b8682;"></td><td></td>
-<td>Honeydew</td><td style="background: #f0fff0;"></td><td></td></tr>
-        <tr><td>Honeydew2</td><td style="background: #e0eee0;"></td><td></td>
-<td>Honeydew3</td><td style="background: #c1cdc1;"></td><td></td>
-<td>Honeydew4</td><td style="background: #838b83;"></td><td></td>
-<td>MintCream</td><td style="background: #f5fffa;"></td><td></td></tr>
-        <tr><td>Azure</td><td style="background: #f0ffff;"></td><td></td>
-<td>AliceBlue</td><td style="background: #f0f8ff;"></td><td></td>
-<td>Lavender</td><td style="background: #e6e6fa;"></td><td></td>
-<td>LavenderBlush</td><td style="background: #fff0f5;"></td><td></td></tr>
-        <tr><td>MistyRose</td><td style="background: #ffe4e1;"></td><td></td>
-<td>White</td><td style="background: #ffffff;"></td><td></td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td></tr>
+### Blues
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo-Blues.png)
 
+### Greens
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo-Greens.png)
 
+### Yellows
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo-Yellows.png)
 
+### Browns
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo-Browns.png)
 
+### Oranges
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo-Oranges.png)
 
-    </tbody>
-</table>
+### Pinks / Violets
+![alt tag](https://github.com/schnibel/MMM-Memo/blob/master/img/MMM-Memo-Pinks.png)
+
 
 
 
