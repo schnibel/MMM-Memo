@@ -2,7 +2,7 @@
 Memo Module for MagicMirror<sup>2</sup>
 
 This an extension for the [MagicMirror²](https://magicmirror.builders/).
-This Module is used to add many memo notes on your Magic Mirror. 
+This Module is used to add many memo notes on your Magic Mirror.
 <br>Content is manageable through http requests.
 
 ## Dependencies
@@ -44,7 +44,7 @@ The following properties can be configured:
 
 | Option                     | Description
 | -------------------------- | -----------
-| `memoTitle`                | [MANDATORY] Title of the memo note.<br><br> ** Note that is NOT case sensitive**
+| `memoTitle`                | [MANDATORY] Title of the memo note.<br><br> **This is NOT case sensitive**
 | `memoMaxItems`             | [OPTIONAL] Integer used to define the maximum number of memo to display per note. If the number of memos is greater than the one specified here, a message (e.g. `+ 2 more memos`) will be displayed at the bottom of the note.<br><br> **Default value:** `5`
 | `memoMaxMsgSize`           | [OPTIONAL] Integer used to define the maximum number of characters to be displayed per memo.<br><br> **Default value:** `false` -> It will show all characters
 | `memoDisplayDuration`      | [OPTIONAL] Used to show since when memos have been created.<br><br> **Possible values:** `true` or `false`<br> **Default value:** `false`
