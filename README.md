@@ -134,14 +134,11 @@ I'm using this module with my Jarvis installation (see http://domotiquefacile.fr
 <br><br>The available http get requests are the following at the moment:
 <table width="100%">
 	<thead>
-		<tr>
-			<th>HTTP GET REQUEST</th>
-			<th width="100%">DESCRIPTION</th>
-		</tr>
+		<tr><th>HTTP GET REQUEST</th></tr>
 	<thead>
 	<tbody>
         <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO<br><br><b>Will add `Fruits` to the `Shopping` memo list</b></td></tr>
-        <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%20%3A%20%2B33%206%2088%2009%20xx%20xx&level=WARNING<br><br><b>Will add `Daddy : + 33 6 88 09 XX XX` to the `Phone Numbers` memo list with a WARNING level</b></td></tr>
+        <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33%2068809xxxx&level=WARNING<br><br><b>Will add `Daddy: +33 68809xxxx` to the `Phone Numbers` memo list with a WARNING level</b></td></tr>
         <tr><td>http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2<br><br><b>Will remove the second displayed memo of the `Phone Numbers` memo list</b></td></tr>
         <tr><td>http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL<br><br><b>Will remove ALL memos of the `Phone Numbers` memo list.</b></td></tr>
         <tr><td>http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=2<br><br><b>NOT YET IMPLEMENTED</b><br>Will temporary display the second memo of the `Shopping` memo list. It will be useful for cut memos</b></td></tr>
