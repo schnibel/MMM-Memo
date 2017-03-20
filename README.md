@@ -1,6 +1,6 @@
 # MMM-Memo
 This an extension for the [MagicMirror²](https://magicmirror.builders/).
-<br>This Module is used to add many memo notes on your Magic Mirror.
+<br>This Module is used to add one to many memo notes on your Magic Mirror.
 <br>Content is manageable through HTTP get requests.
 
 ## What does it look like
