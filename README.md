@@ -140,7 +140,7 @@ I'm using this module with my Jarvis installation (see http://domotiquefacile.fr
 		</tr>
 	<thead>
 	<tbody>
-        <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO</td><td>Will add `Fruits` to the `Shopping` memo list</td></tr>
+        <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO<br><br>Will add `Fruits` to the `Shopping` memo list</td></tr>
         <tr><td>http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%20%3A%20%2B33%206%2088%2009%20xx%20xx&level=WARNING</td><td>Will add `Daddy : + 33 6 88 09 XX XX` to the `Phone Numbers` memo list with a WARNING level</td></tr>
         <tr><td>http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=2</td><td>Will remove the second displayed memo of the `Phone Numbers` memo list</td></tr>
         <tr><td>http://MIRROR_IP:MIRROR_PORT/RemoveMemo?memoTitle=phone%20numbers&item=ALL</td><td>Will remove ALL memos of the `Phone Numbers` memo list.</td></tr>
@@ -152,4 +152,5 @@ I'm using this module with my Jarvis installation (see http://domotiquefacile.fr
 
 ## Special thanks
 I implemented colors from http://www.tayloredmktg.com/rgb/#PI website for color definitions, so I thank the author of this web page.
-I got the memo note CSS from http://creative-punch.net/2014/02/create-css3-post-it-note/, so I also wanted to thank Creative Punch.
+<br>I got the memo note CSS from http://creative-punch.net/2014/02/create-css3-post-it-note/, so I also wanted to thank Creative Punch.
+<br>Enjoy... and do not hesitate to make comments or propose new functionalities.
