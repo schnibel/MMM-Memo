@@ -21,6 +21,11 @@ module.exports = NodeHelper.create({
 			var memoTitle = query.memoTitle;
 			var item = query.item;
 
+            if (typeof level === "undefined") {
+                level = "INFO";
+                console.log("automatically set level to INFO");
+            }
+
 			if (memoTitle == null && item == null && level == null) {
 				res.send({"status": "failed", "error": "No 'memoTitle', 'level' and 'item' given."});
 			}
@@ -64,6 +69,27 @@ module.exports = NodeHelper.create({
 			}
 		});
 
+		this.expressApp.get('/DisplayMemo', (req, res) => {
+
+			var query = url.parse(req.url, true).query;
+			var memoTitle = query.memoTitle;
+			var item = query.item;
+
+			if (memoTitle == null && item == null){
+				res.send({"status": "failed", "error": "No 'memoTitle' and 'item' given."});
+			}
+			else if (memoTitle == null) {
+				res.send({"status": "failed", "error": "No 'memoTitle' given."});
+			}
+			else if (item == null) {
+				res.send({"status": "failed", "error": "No 'item' given."});
+			}
+			else {
+				var display_item = {"memoTitle": memoTitle.toLowerCase(), "item": item};
+				res.send({"status": "success", "payload": display_item});
+			    this.displayMemos(display_item);
+			}
+		});
 	},
 	
 	socketNotificationReceived: function(notification, payload) {
@@ -107,6 +133,25 @@ module.exports = NodeHelper.create({
 
         if (j == 0) console.log("The memoTitle '"+old_item.memoTitle.toLowerCase()+"' doesn't exist");
         fs.writeFileSync(this.memoFilename, JSON.stringify({"memos": this.memos}), 'utf8');
+    },
+
+    displayMemos: function(item){
+
+        var j = 0;
+        for (var i = this.memos.length - 1; i >= 0; i--) {
+            if (this.memos[i].memoTitle.toLowerCase() == item.memoTitle.toLowerCase()) {
+                if (item.item == 'ALL') {
+                    j = -1;
+                    this.sendSocketNotification("DISPLAY", this.memos);
+                }
+                else {
+                    j = j+1;
+                    if (j == item.item) this.sendSocketNotification("DISPLAY", this.memos[i]);
+                }
+            }
+        }
+
+        if (j == 0) console.log("The memoTitle '"+item.memoTitle.toLowerCase()+"' doesn't exist");
     },
 
 	fileExists: function(path){

@@ -18,6 +18,7 @@
 		memoDisplayIfEmpty: false,
 		memoDisplayId: true,
 		memoDisplayHeader: true,
+		memoDisplayNotification: false,
 		memoColorBackground: 'Yellow',
         memoColorHeader: 'Black',
 		memoColorFont: 'Black',
@@ -62,9 +63,9 @@
 
 	getTranslations: function() {
 		return {
-			en: "translations/en.json",
-			fr: "translations/fr.json",
-			id: "translations/id.json"
+            en: "translations/en.json",
+            fr: "translations/fr.json",
+            id: "translations/id.json"
 		};
 	},
 
@@ -79,13 +80,13 @@
 		Log.info("Starting module: " + this.name);
 
 		moment.locale(config.language);
-
+		
 		//Update DOM every minute so that the time of the call updates and calls get removed after a certain time
 		setInterval(() => {
 			this.updateDom();
 		}, 60000);
 	 },
-
+	
 	socketNotificationReceived: function(notification, payload) {
 
 		if(notification === "INIT") {
@@ -98,6 +99,28 @@
 		else if(notification === "ADD") {
 			this.memos.push(payload);
 			this.updateDom(3000);
+		}
+		else if(notification === "DISPLAY") {
+            if (this.config.memoDisplayNotification) {
+                var ttl = "";
+                var msg = "";
+                var ts = "";
+
+                if (payload.length > 1) {
+                    ttl = "<b>" + payload[0].memoTitle.toUpperCase() + "</b>";
+                    for (var i = payload.length - 1; i >= 0; i--) {
+                        ts = this.config.format ? moment(payload[i].timestamp).format(this.config.format) : moment(payload[i].timestamp).fromNow();
+                        msg = msg + "<b><u>" + this.translate("memo") + " n°" + (payload.length-i) + "</u></b> (" + ts + ")<br>" + payload[i].item + "<br><br>";
+                    }
+                }
+                else {
+                    ttl = "<b>" + payload.memoTitle.toUpperCase() + "</b>";
+                    ts = this.config.format ? moment(payload.timestamp).format(this.config.format) : moment(payload.timestamp).fromNow();
+                    msg = msg + "<b><u>" + this.translate("memo") + "</u></b> (" + ts + ")<br>" + payload.item + "<br><br>";
+                }
+
+			    this.sendNotification("SHOW_ALERT", {type: "notification", title: ttl, message: msg});
+            }
 		}
 	 },
 
