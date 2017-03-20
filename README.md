@@ -106,6 +106,28 @@ http://MIRROR_IP:MIRROR_PORT/DisplayMemo?memoTitle=SHOPPING&item=ALL
 
 
 ## Colors
+
+```html
+<table width="100%">
+	<thead>
+		<tr>
+			<th>Color Name</th>
+			<th width="100%">Color</th>
+		</tr>
+	<thead>
+	<tbody>
+        <tr><td>Snow</td><td style="background: #fffafa;"></td></tr>
+        <tr><td>Snow2</td><td style="background: #eee9e9;"></td></tr>
+        <tr><td>Snow3</td><td style="background: #cdc9c9;"></td></tr>
+        <tr><td>Snow4</td><td style="background: #8b8989;"></td></tr>
+        <tr><td>GhostWhite</td><td style="background: #f8f8ff;"></td></tr>
+        <tr><td>WhiteSmoke</td><td style="background: #f5f5f5;"></td></tr>
+    </tbody>
+</table>
+```
+
+
+
 Here are the available colors.
 <table width="100%">
 	<thead>
