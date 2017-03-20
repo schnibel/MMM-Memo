@@ -132,6 +132,18 @@ Here are the available colors.
 I'm using this module with my Jarvis installation (see http://domotiquefacile.fr/jarvis/).
 <br>When I speak to Jarvis, I say for example : "add FRUITS to the SHOPPING memo list", and Jarvis automatically sends a http get request (through curl) to the MMM-Memo module.
 <br><br>The available http get requests are the following at the moment:
+
+<br><br>To add `Fruits` to the `Shopping` memo list:
+````
+http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
+````
+
+<br><br>Will add `Daddy: +33 68809xxxx` to the `Phone Numbers` memo list with a WARNING level:
+````
+http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33%2068809xxxx&level=WARNING
+````
+
+
 <table width="100%">
 	<thead>
 		<tr><th>HTTP GET REQUEST</th></tr>
