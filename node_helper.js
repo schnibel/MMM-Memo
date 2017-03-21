@@ -137,20 +137,28 @@ module.exports = NodeHelper.create({
 
     displayMemos: function(item){
 
+        // Create a temporary array to deal with expected memos
+	    var tempMemos = [];
+	    for (var i = 0; i < this.memos.length ; i++ ) {
+	        if (this.memos[i].memoTitle.toLowerCase() == item.memoTitle.toLowerCase()) {
+	            tempMemos.push(this.memos[i]);
+	        }
+	    }
+
         var j = 0;
-        for (var i = this.memos.length - 1; i >= 0; i--) {
-            if (this.memos[i].memoTitle.toLowerCase() == item.memoTitle.toLowerCase()) {
-                if (item.item == 'ALL') {
-                    j = -1;
-                    this.sendSocketNotification("DISPLAY", this.memos);
-                }
-                else {
+
+        // If ALL is specified, send the whole array
+        if (item.item == 'ALL') {
+            j = -1;
+            this.sendSocketNotification("DISPLAY", tempMemos);
+        }
+        // else, find the expected item
+        else {
+            for (var i = tempMemos.length - 1; i >= 0; i--) {
                     j = j+1;
-                    if (j == item.item) this.sendSocketNotification("DISPLAY", this.memos[i]);
-                }
+                    if (j == item.item) this.sendSocketNotification("DISPLAY", tempMemos[i]);
             }
         }
-
         if (j == 0) console.log("The memoTitle '"+item.memoTitle.toLowerCase()+"' doesn't exist");
     },
 
