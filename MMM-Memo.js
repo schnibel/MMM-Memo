@@ -65,7 +65,7 @@
 		return {
             en: "translations/en.json",
             fr: "translations/fr.json",
-            id: "translations/id.json"
+            id: "translations/id.json",
             sv: "translations/sv.json"
 		};
 	},
