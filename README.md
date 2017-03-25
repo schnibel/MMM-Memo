@@ -153,4 +153,5 @@ Here are the available colors.
 - [Taylored Marketing](http://www.tayloredmktg.com/rgb/#PI) for colors definition.
 - [Creative Punch](http://creative-punch.net/2014/02/create-css3-post-it-note/) for the memo note CSS creation.
 - [Slamet PS](https://github.com/slametps) for the Indonesian translation
+- [Snille](https://github.com/Snille) for the Swedish translation
 <br><br>Enjoy... and do not hesitate to make comments or propose new functionalities.
