@@ -82,7 +82,7 @@ http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING&item=Fruits&level=INFO
 http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%2B33123456789&level=WARNING
 ````
 **NOTE** : The level property is optional in the request. If not specified, the `INFO` level will be set.
-**NOTE** : Here is an example of a curl command with urlencode syntax
+<br>**NOTE** : Here is an example of a curl command with urlencode syntax
 ````
 curl -G -v "http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING" --data-urlencode "item=Bonjour, êtes-vous allées dans votre boutique préférée ?"
 ````
