@@ -83,7 +83,9 @@ http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=phone%20numbers&item=Daddy%3A%20%
 ````
 **NOTE** : The level property is optional in the request. If not specified, the `INFO` level will be set.
 **NOTE** : Here is an example of a curl command with urlencode syntax
-<br>curl -G -v "http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING" --data-urlencode "item=Bonjour, êtes-vous allées dans votre boutique préférée ?"
+````
+curl -G -v "http://MIRROR_IP:MIRROR_PORT/AddMemo?memoTitle=SHOPPING" --data-urlencode "item=Bonjour, êtes-vous allées dans votre boutique préférée ?"
+````
 
 ### To remove the second displayed memo of the 'Phone Numbers' memo note:
 ````
