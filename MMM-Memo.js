@@ -192,7 +192,8 @@
                 var tr_memo_td_id = document.createElement("td");
                 tr_memo_td_id.classList.add("xsmall");
                 tr_memo_td_id.style.align = 'center';
-                if (this.config.memoDisplayId) {
+                tr_memo_td_id.style.borderColor = "transparent";
+               if (this.config.memoDisplayId) {
                     var id = "CIRCLED_DIGIT_" + (tempMemos.length-i);
                     tr_memo_td_id.innerHTML = this.config.memoIndex[id];
                 }
@@ -200,6 +201,7 @@
 
                 // Creation of second cell <td> to optionally display an alert icon for important memo.
                 var tr_memo_td_status = document.createElement("td");
+                tr_memo_td_status.style.borderColor = "transparent";
 			    var icon =  document.createElement("i");
 			    if(this.config.memoLevel.hasOwnProperty(tempMemos[i].level)){
 				    icon.classList.add("fa", "fa-fw", "fa-" + this.config.memoLevel[tempMemos[i].level]);
@@ -216,6 +218,7 @@
                 }
 
                 var tr_memo_td_message =  document.createElement("td");
+                tr_memo_td_message.style.borderColor = "transparent";
                 tr_memo_td_message.classList.add("small");
                 tr_memo_td_message.style.textAlign = 'right';
                 tr_memo_td_message.innerHTML = " " + memo;
@@ -227,8 +230,11 @@
                     var table_tr_duration =  document.createElement("tr");
                     if (tempMemos[i].level == "WARNING") table_tr_duration.style.color = this.config.memoColorWarning;
                     var tr_duration_td_empty1 = document.createElement("td");
+                    tr_duration_td_empty1.style.borderColor = "transparent";
                     var tr_duration_td_empty2 = document.createElement("td");
+                    tr_duration_td_empty2.style.borderColor = "transparent";
                     var tr_duration_td_value = document.createElement("td");
+                    tr_duration_td_value.style.borderColor = "transparent";
                     tr_duration_td_value.innerHTML = this.config.format ? moment(tempMemos[i].timestamp).format(this.config.format) : moment(tempMemos[i].timestamp).fromNow();
                     tr_duration_td_value.classList.add("light", "xxsmall", "align-right");
 
@@ -243,8 +249,11 @@
             if (tempMemos.length < tempMemosSize) {
                 var last_row = document.createElement("tr");
                 var cell1 = document.createElement("td");
+                cell1.style.borderColor = "transparent";
                 var cell2 = document.createElement("td");
+                cell2.style.borderColor = "transparent";
                 var cell3 = document.createElement("td");
+                cell3.style.borderColor = "transparent";
                 if ( (tempMemosSize - tempMemos.length) > 1)
                     cell3.innerHTML = "+ " + (tempMemosSize - tempMemos.length) + this.translate("moreItems");
                 else cell3.innerHTML = "+ " + (tempMemosSize - tempMemos.length) + this.translate("moreItem");
