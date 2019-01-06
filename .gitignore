@@ -1,4 +1,2 @@
-
-backup.json
-
-MMM-Memo.json
+.gitignore
+node_modules

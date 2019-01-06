@@ -1,7 +1,7 @@
 /* Magic Mirror
  * Module: MMM-Memo
  *
- * By Christophe Michel @schnibel
+ * By Schnibel @schnibel
  * March 2017
  * MIT Licensed.
  *
