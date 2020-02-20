@@ -24,6 +24,15 @@
   line-height: 15px;
 }
 
+.memohead {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.notenum {
+  font-size: 10px;
+  line-height: 15px;
+}
 
 .symbol span {
   display: inline-block;

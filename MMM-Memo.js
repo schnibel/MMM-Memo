@@ -27,6 +27,7 @@
 		memoWidth: '100px',
 		memoHeight: '100px',
 		memoPadding: '20px',
+		memoItemAllign: 'right',
 		memoFilename: 'MMM-Memo.json',
 
 		format: false,
@@ -166,7 +167,7 @@
             // It is used to optionally display the name of the memo and the number of items
             if (this.config.memoDisplayHeader) {
                 var blockquote_header = document.createElement("header");
-                blockquote_header.className = "xsmall";
+                blockquote_header.className = "xsmall memohead";
                 blockquote_header.style.color = this.config.memoColorHeader;
                 blockquote_header.innerHTML = this.config.memoTitle.toLowerCase() + " (" + tempMemosSize + ")";
                 wrapper_blockquote.appendChild(blockquote_header);
@@ -190,7 +191,7 @@
 
                 // Creation of first cell <td> to optionally display the id of the memo.
                 var tr_memo_td_id = document.createElement("td");
-                tr_memo_td_id.classList.add("xsmall");
+                tr_memo_td_id.classList.add("notenum");
                 tr_memo_td_id.style.align = 'center';
                 tr_memo_td_id.style.borderColor = "transparent";
                if (this.config.memoDisplayId) {
@@ -220,7 +221,7 @@
                 var tr_memo_td_message =  document.createElement("td");
                 tr_memo_td_message.style.borderColor = "transparent";
                 tr_memo_td_message.classList.add("small");
-                tr_memo_td_message.style.textAlign = 'right';
+                tr_memo_td_message.style.textAlign = this.config.memoItemAllign;
                 tr_memo_td_message.innerHTML = " " + memo;
                 table_tr_memo.appendChild(tr_memo_td_message);
                 blockquote_table.appendChild(table_tr_memo);
