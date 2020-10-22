@@ -18,7 +18,7 @@ cd ~/MagicMirror/modules
 
 Clone this repository:
 ````
-git clone https://github.com/schnibel/MMM-Memo.git
+git clone https://github.com/snille/MMM-Memo.git
 ````
 
 ## Using the module
