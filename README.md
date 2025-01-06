@@ -18,7 +18,7 @@ cd ~/MagicMirror/modules
 
 Clone this repository:
 ````
-git clone https://github.com/schnibel/MMM-Memo.git
+git clone https://github.com/snille/MMM-Memo.git
 ````
 
 ## Using the module
@@ -61,6 +61,7 @@ The following properties can be configured:
 | `memoWidth`                | [OPTIONAL]<br>Value to specify the width of the note.<br><br> **Default value:** `100px`
 | `memoHeight`               | [OPTIONAL]<br>Value to specify the height of the note.<br><br> **Default value:** `100px`
 | `memoPadding`              | [OPTIONAL]<br>Value to specify the padding of the note.<br><br> **Default value:** `20px`
+| `memoItemAllign`           | [OPTIONAL]<br>To set the note entry either alligned to the "left" or to the "right".<br><br> **Default value:** `right`
 | `format`                   | [OPTIONAL]<br>Displays relative date format, for absolute date format provide a string like `'DD:MM HH:mm'` [All Options](http://momentjs.com/docs/#/displaying/format/)
 
 
